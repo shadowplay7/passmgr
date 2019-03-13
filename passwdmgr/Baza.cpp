@@ -18,7 +18,7 @@ void Baza::createConnection() {
 void Baza::setUpPassword() {
 	userPass = getUserPassword();
 	if ((sqlite3_key(database, userPass.c_str(), strlen(userPass.c_str()))) == SQLITE_OK)
-	getLabelValue("Connected!x");
+	getLabelValue("Connected!");
 }
 
 int Baza::checkPass() {
