@@ -14,12 +14,20 @@ EncryptFile::EncryptFile(QWidget *parent)
 }
 
 void EncryptFile::runUserInputDialog() {
+	
 	dialog = new DialogInput();
 	dialog->exec();
 	getters();
 	setters();
-
 	plik->insertValues();
+
+	//QPointer dlg = new DialogInput();
+	//if (dlg->exec() == QDialog::Accepted) {
+	//	getters();
+	//	setters();
+	//	plik->insertValues();
+	//}
+	//delete dlg;
 }
 
 EncryptFile::~EncryptFile() {

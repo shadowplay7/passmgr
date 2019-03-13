@@ -18,7 +18,17 @@ void Baza::createConnection() {
 void Baza::setUpPassword() {
 	userPass = getUserPassword();
 	if ((sqlite3_key(database, userPass.c_str(), strlen(userPass.c_str()))) == SQLITE_OK)
-	getLabelValue("Connected!");
+	{
+		QMessageBox msgBox;
+		msgBox.setText("Database created successfly!");
+		msgBox.exec();
+		getLabelValue("Connected!");
+	}
+	else {
+		QMessageBox msgBox;
+		msgBox.setText("Something went wrong! Please, try again.");
+		msgBox.exec();
+	}
 }
 
 int Baza::checkPass() {
@@ -30,6 +40,7 @@ int Baza::checkPass() {
 		QMessageBox msgBox;
 		msgBox.setText("Wrong password!");
 		msgBox.exec();
+		getLabelValue("Not connected!");
 		return 1;
 	}
 	else {

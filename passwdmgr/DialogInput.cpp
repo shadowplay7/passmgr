@@ -8,7 +8,7 @@ DialogInput::DialogInput(QWidget *parent)
 	ui.setupUi(this);
 	connect(ui.cancelButton, &QPushButton::clicked, this, &DialogInput::close);
 	connect(ui.okButton, &QPushButton::clicked, this, &DialogInput::buttonClicked);
-	
+
 }
 
 void DialogInput::buttonClicked() {

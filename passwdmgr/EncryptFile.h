@@ -8,7 +8,7 @@
 #include <string>
 #include "Baza.h"
 #include "DialogInput.h"
-
+#include <QPointer>
 
 class EncryptFile : public QMainWindow
 {
@@ -32,5 +32,4 @@ private:
 
 private slots:
 	void runUserInputDialog();
-
 };

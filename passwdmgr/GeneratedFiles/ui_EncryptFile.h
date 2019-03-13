@@ -71,7 +71,7 @@ public:
 
     void retranslateUi(QMainWindow *EncryptFileClass)
     {
-        EncryptFileClass->setWindowTitle(QApplication::translate("EncryptFileClass", "EncryptFile", nullptr));
+        EncryptFileClass->setWindowTitle(QApplication::translate("EncryptFileClass", "passmgr", nullptr));
         createBtn->setText(QApplication::translate("EncryptFileClass", "disconnect", nullptr));
         insertBtn->setText(QApplication::translate("EncryptFileClass", "insertTestValues", nullptr));
         bazaBtn->setText(QApplication::translate("EncryptFileClass", "create/connect", nullptr));

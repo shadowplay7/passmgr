@@ -126,7 +126,7 @@ public:
         label->setText(QApplication::translate("DialogInput", "site name/link", nullptr));
         label_2->setText(QApplication::translate("DialogInput", "login", nullptr));
         label_3->setText(QApplication::translate("DialogInput", "password", nullptr));
-        okButton->setText(QApplication::translate("DialogInput", "OK", nullptr));
+        okButton->setText(QApplication::translate("DialogInput", "Save", nullptr));
         cancelButton->setText(QApplication::translate("DialogInput", "Cancel", nullptr));
         generateButton->setText(QApplication::translate("DialogInput", "generatePass", nullptr));
     } // retranslateUi
