@@ -1,5 +1,9 @@
 #include "Baza.h"
 
+void Baza::showTable() {
+
+}
+
 void Baza::createConnection() {
 	if (!(std::filesystem::exists("TotallyNotDBWithPasswords.db")))
 	{
@@ -30,6 +34,7 @@ void Baza::setUpPassword() {
 		msgBox.exec();
 	}
 }
+
 
 int Baza::checkPass() {
 	userPass = getUserPassword();

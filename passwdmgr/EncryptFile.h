@@ -2,13 +2,15 @@
 #define SQLITE_HAS_CODEC
 #include <QtWidgets/QMainWindow>
 #include "ui_EncryptFile.h"
+#include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlTableModel>
 #include <QInputDialog>
 #include <QDir>
 #include "sqlite3.h"
 #include <string>
 #include "Baza.h"
 #include "DialogInput.h"
-#include <QPointer>
+#include <QSortFilterProxyModel>
 
 class EncryptFile : public QMainWindow
 {
@@ -16,6 +18,7 @@ class EncryptFile : public QMainWindow
 
 public:
 	EncryptFile(QWidget *parent = Q_NULLPTR);
+	/*void init();*/
 	~EncryptFile();
 	void getters();
 	void setters();
@@ -29,7 +32,9 @@ private:
 	DialogInput *dialog;
 	std::unique_ptr<DialogInput> dialptr = nullptr;
 	
-
+	//QSqlTableModel *table_model;
+	//QSqlDatabase mydb;
+	//void initializeModel(QSqlTableModel *model);
 private slots:
 	void runUserInputDialog();
 };

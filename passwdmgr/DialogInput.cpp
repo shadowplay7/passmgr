@@ -15,6 +15,7 @@ void DialogInput::buttonClicked() {
 	setSite();
 	setLogin();
 	setPass();
+	close();
 }
 
 void DialogInput::setSite() {
